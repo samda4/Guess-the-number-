@@ -11,8 +11,8 @@ public:
     char* name;
     int course;
 
-    void set_id(char* a);
-    void set_name(char* b);
+    void set_id(char a[]);
+    void set_name(char b[]);
     void set_gpa(float);
     void set_course(int);
     char* get_name();
@@ -33,8 +33,8 @@ public:
     student();
     student(student &);
     void copy(student &);
-    student(char *a, char *b, float c, int d);
-    void set_all(char *a, char *b, float c, int d);
+    student(char a[], char b[], float c, int d);
+    void set_all(char a[], char b[], float c, int d);
     ~student();
 };
 #endif
