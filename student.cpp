@@ -3,12 +3,12 @@
 #include <iostream>
 using namespace std;
 int student::count = 0;
-void student::set_id(char *a)
+void student::set_id(char a[])
 {
     id=new char[strlen(a)+1];
     strcpy(name,a);
 }
-void student::set_name(char *b)
+void student::set_name(char b[])
 {
     id=new char[strlen(b)+1];
     strcpy(name,b);
@@ -131,7 +131,7 @@ void student::copy(student &a)
 {
     set_all(a.name,a.id,a.gpa,a.course);
 }
-student::student(char *a, char *b, float c, int d)
+student::student(char a[], char b[], float c, int d)
 {
     this->name = new char[strlen(a)+1];
     strcpy(this->name, a);
@@ -142,7 +142,7 @@ student::student(char *a, char *b, float c, int d)
     this->gpa = c;
     this->course = d;
 }
-void student::set_all(char *a, char *b, float c, int d)
+void student::set_all(char a[], char b[], float c, int d)
 {
     this->name = new char[strlen(a)+1];
     strcpy(this->name, a);
